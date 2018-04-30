@@ -26,8 +26,12 @@ public class Chat extends AppCompatActivity {
     RelativeLayout layout_2;
     ImageView sendButton;
     EditText messageArea;
+    EditText username;
     ScrollView scrollView;
     Firebase reference1, reference2;
+    String user, status;
+
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,7 @@ public class Chat extends AppCompatActivity {
         layout_2 = (RelativeLayout)findViewById(R.id.layout2);
         sendButton = (ImageView)findViewById(R.id.sendButton);
         messageArea = (EditText)findViewById(R.id.messageArea);
+        username = (EditText)findViewById(R.id.username);
         scrollView = (ScrollView)findViewById(R.id.scrollView);
 
         Firebase.setAndroidContext(this);
@@ -48,8 +53,17 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String messageText = messageArea.getText().toString();
+                status = "Sent";
 
                 if(!messageText.equals("")){
+
+                    MessagesDb mdb = new MessagesDb();
+                    mdb.setUserid(user);
+                    mdb.setMessage(messageText);
+                    mdb.setStatus(status);
+
+                    helper.insertMessagesDb(mdb);
+
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("message", messageText);
                     map.put("user", UserDetails.username);

@@ -8,9 +8,6 @@ public class MessyDbSchema {
             public static final String UUID = "uuid";
             public static final String USERID = "userid";
             public static final String PASSWORD = "password";
-            public static final String MESSAGE = "message";
-            public static final String SENT = "sent";
-            public static final String NICKNAME = "nickname";
             public static final String PIC = "profilepic";
         }
     }
@@ -20,6 +17,7 @@ public class MessyDbSchema {
 
         public static final class Messages {
             public static final String UUID = "uuid";
+            public static final String MESSAGE = "message";
             public static final String NICKNAME = "nickname";
             public static final String SENT = "sentstatus";
             public static final String TIME = "timesent";
