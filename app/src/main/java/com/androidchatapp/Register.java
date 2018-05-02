@@ -27,6 +27,8 @@ public class Register extends AppCompatActivity {
     String user, pass;
     TextView login;
 
+    DatabaseHelper helper = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +73,12 @@ public class Register extends AppCompatActivity {
                                 final ProgressDialog pd = new ProgressDialog(Register.this);
                                 pd.setMessage("Loading...");
                                 pd.show();
+
+                                Profile p = new Profile();
+                                p.setUserid(user);
+                                p.setPass(pass);
+
+                                helper.insertProfile(p);
 
                                 String url = "https://androidchatapp-1c736.firebaseio.com/users.json";
 
