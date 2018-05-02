@@ -26,6 +26,8 @@ public class Login extends AppCompatActivity {
     Button loginButton;
     String user, pass;
 
+    DatabaseHelper helper = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +63,8 @@ public class Login extends AppCompatActivity {
                     pd.setMessage("Loading...");
                     pd.show();
 
+                    final String password = helper.searchPass(user);
+
                     StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
                         @Override
                         public void onResponse(String s) {
@@ -77,7 +81,7 @@ public class Login extends AppCompatActivity {
                                     else if(obj.getJSONObject(user).getString("password").equals(pass)){
                                         UserDetails.username = user;
                                         UserDetails.password = pass;
-                                        startActivity(new Intent(Login.this, Users.class));
+                                        startActivity(new Intent(Login.this, Home.class));
                                     }
                                     else {
                                         Toast.makeText(Login.this, "incorrect password", Toast.LENGTH_LONG).show();

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Users extends AppCompatActivity {
+    ImageButton homeButton, usersButton, profileButton;
     ListView usersList;
     TextView noUsersText;
     ArrayList<String> al = new ArrayList<>();
@@ -32,11 +35,14 @@ public class Users extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
-        usersList = (ListView)findViewById(R.id.usersList);
-        noUsersText = (TextView)findViewById(R.id.noUsersText);
+        usersList = (ListView) findViewById(R.id.usersList);
+        noUsersText = (TextView) findViewById(R.id.noUsersText);
+
 
         pd = new ProgressDialog(Users.this);
         pd.setMessage("Loading...");
@@ -44,12 +50,12 @@ public class Users extends AppCompatActivity {
 
         String url = "https://androidchatapp-1c736.firebaseio.com/users.json";
 
-        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
+        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
                 doOnSuccess(s);
             }
-        },new Response.ErrorListener(){
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
                 System.out.println("" + volleyError);
@@ -66,6 +72,49 @@ public class Users extends AppCompatActivity {
                 startActivity(new Intent(Users.this, Chat.class));
             }
         });
+
+        homeButton = (ImageButton)findViewById(R.id.usersHomeButton);
+
+        homeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+
+        usersButton = (ImageButton)findViewById(R.id.usersChatButton);
+
+        usersButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openChatActivity();
+            }
+        });
+
+        profileButton = (ImageButton)findViewById(R.id.usersProfileButton);
+
+        profileButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openProfileActivity();
+            }
+        });
+
+    }
+
+    public void openChatActivity(){
+     Intent intent = new Intent(this, Users.class);
+     startActivity(intent);
+    }
+
+    public void openHomeActivity(){
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+    }
+
+    public void openProfileActivity(){
+        Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
     }
 
     public void doOnSuccess(String s){
@@ -101,4 +150,5 @@ public class Users extends AppCompatActivity {
 
         pd.dismiss();
     }
+
 }
