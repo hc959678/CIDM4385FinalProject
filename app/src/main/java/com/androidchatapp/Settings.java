@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Home extends AppCompatActivity {
-    ImageButton homeButton, usersButton, profileButton;
+public class Settings extends AppCompatActivity {
+    ImageButton settingsButton, usersButton, profileButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_settings);
 
-        homeButton = (ImageButton)findViewById(R.id.usersHomeButton);
+        settingsButton = (ImageButton)findViewById(R.id.usersSettingsButton);
 
-        homeButton.setOnClickListener(new View.OnClickListener(){
+        settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 openHomeActivity();
@@ -48,7 +48,7 @@ public class Home extends AppCompatActivity {
     }
 
     public void openHomeActivity(){
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 

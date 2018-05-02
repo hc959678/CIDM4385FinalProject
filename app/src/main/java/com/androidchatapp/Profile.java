@@ -7,7 +7,7 @@ import android.widget.ImageButton;
 import android.support.v7.app.AppCompatActivity;
 
 public class Profile extends AppCompatActivity{
-    ImageButton homeButton, usersButton, profileButton;
+    ImageButton settingsButton, usersButton, profileButton;
     int id;
     String userid, pass;
 
@@ -15,9 +15,9 @@ public class Profile extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
 
-        homeButton = (ImageButton)findViewById(R.id.usersHomeButton);
+        settingsButton = (ImageButton)findViewById(R.id.usersSettingsButton);
 
-        homeButton.setOnClickListener(new View.OnClickListener(){
+        settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 openHomeActivity();
@@ -49,7 +49,7 @@ public class Profile extends AppCompatActivity{
     }
 
     public void openHomeActivity(){
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
