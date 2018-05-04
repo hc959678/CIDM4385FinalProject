@@ -17,21 +17,29 @@
         android:id="@+id/tvTitle"
         android:layout_gravity="center"/>
 
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameOfUser"
+        android:hint="Type a username"
+        android:layout_gravity="center"
+        android:textSize="20dp"/>
+
     <ImageView
         android:background="#eeeeee"
         android:layout_height="200dp"
         android:layout_width="200dp"
-        android:id="@+id/ivUser"
+        android:id="@+id/imageView"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/takePicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
-        android:text="Log Out" />
+        android:text="Change Profile Picture" />
 
     <LinearLayout
         android:layout_width="wrap_content"
