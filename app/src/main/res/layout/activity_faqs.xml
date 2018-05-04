@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<LinearLayout
+    tools:context="com.androidchatapp.Profile"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="FAQS"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/btnback"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="What is Messy Chat App?"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Messy Chat app is a free instant-messaging application for Android. allowing them to send and recevive messages,contact infromation,and URL links,in 1:1 or group chats."
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="My Messy Chat App is too slow"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+       android:text="Messy Chat App may not work properly on low specification device. (AND: 4.3 or lower)."
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="I want to report rights infringement"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Please contact the Customer Serivce to report rights infringement."
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Is my Account Secure?"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Messy Account is a very secure way to store your information and access the span of our services."
+        android:layout_gravity="center"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<LinearLayout
+    tools:context="com.androidchatapp.Profile"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="ABOUT US"
+        android:layout_gravity="center"/>
+
+
+    <ImageButton
+        android:id="@+id/btnback"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Team 'Messy' is an android application developing team under WTAMU. They are officially formed in April 2018 by Hosu Choi and Luke Ford. Hosu Choi is an international student and majoring in CIS. He has been managing Layout as a adroid designer. Luke Ford has been working Java part. He is a non-international student and majoring in CIS.   "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="MEMBERS"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developer : Luke Ford"
+        android:id="@+id/lukeF"/>
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/luke"
+        android:src="@drawable/ic_home_black_24dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Designer : Hosu Choi"
+        android:id="@+id/HosuC"/>
+
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosu"
+        android:src="@drawable/ic_home_black_24dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advisor : Dr.Babb"
+        android:id="@+id/DRB"/>
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/babb"
+        android:src="@drawable/ic_home_black_24dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+</LinearLayout>
