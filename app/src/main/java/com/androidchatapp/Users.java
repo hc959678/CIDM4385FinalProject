@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Users extends AppCompatActivity {
-    ImageButton homeButton, usersButton, profileButton;
+    ImageButton settingsButton, usersButton, profileButton;
     ListView usersList;
     TextView noUsersText;
     ArrayList<String> al = new ArrayList<>();
@@ -73,9 +73,9 @@ public class Users extends AppCompatActivity {
             }
         });
 
-        homeButton = (ImageButton)findViewById(R.id.usersHomeButton);
+        settingsButton = (ImageButton)findViewById(R.id.usersSettingsButton);
 
-        homeButton.setOnClickListener(new View.OnClickListener(){
+        settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 openHomeActivity();
@@ -108,7 +108,7 @@ public class Users extends AppCompatActivity {
     }
 
     public void openHomeActivity(){
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
